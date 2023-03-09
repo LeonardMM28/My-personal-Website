@@ -1,15 +1,16 @@
 * {
-  border-style: dashed;
-  border-color: red;
+  /* border-style: dashed;
+  border-color: red; */
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Jost";
-  width: auto;
+  width: 100%;
 }
 
-html{
-  display: grid;
+body{
+  display: flex;
+  flex-wrap: wrap;
 }
 
 header {
@@ -19,10 +20,12 @@ header {
   color: rgb(192, 231, 255);
 }
 
+h1{
+  display: inline-block;
+}
+
 .intro {
   background-color: rgb(0, 106, 214);
-  display: flex;
-  flex-wrap:wrap;
 }
 
 .mydata {
@@ -39,7 +42,7 @@ header {
 
 .contactInfo {
   padding: 3rem;
-  text-align: justify;
+  text-size-adjust: 1rem;
   font-size: 1.2rem;
 }
 
@@ -49,7 +52,6 @@ header {
 
 .firstBlock {
   background-color: rgb(0, 126, 254);
-  display: grid;
 }
 
 .projects {
