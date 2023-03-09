@@ -1,14 +1,14 @@
 * {
+  border-style: dashed;
+  border-color: red;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Jost";
-  width: auto;
 }
 
 html{
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
 }
 
 header {
@@ -50,8 +50,7 @@ header {
 
 .firstBlock {
   background-color: rgb(0, 126, 254);
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
 }
 
 .projects {
