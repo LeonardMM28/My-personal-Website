@@ -1,5 +1,5 @@
-window.onload = function alert() {
+window.addEventListener("DOMContentLoaded", function (ev) {
   alert(
-    "Hi there! \nI am Leonardo Meza \nand you have reached my BIO website \nneverthless I am still working on it \nhence I apologize if you \ncannot find too much info yet, \nyou might wanna come back \nanother time to check for updates. \nHave a nice day! :)"
+    "Hi there! I am Leonardo Meza and thanks for visiting my personal website, nevertheless I am still working on it, hence I apologize if you cannot find too much info yet, you might wanna come back another time to check for updates!! Have a nice day! :)"
   );
-};
+});
