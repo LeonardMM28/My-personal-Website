@@ -1,6 +1,6 @@
 * {
-  /* border-style: dashed;
-  border-color: red; */
+  border-style: dashed;
+  border-color: red;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -12,16 +12,21 @@
   width: 15rem;
   height: 16rem;
   border-radius: 50%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
-.sn {
+.socialNet img {
   width: 4rem;
   height: 4rem;
-  border-style: dashed;
-  border-color: white;
   border-radius: 50%;
+  box-shadow: 10px 10px;
+  transition: 1.5s;
+}
+
+.socialNet img:hover{
+  box-shadow: 0 0;
+  transform:translate(10px, 10px);
 }
 
 header {
@@ -44,6 +49,12 @@ h1 {
   margin: auto;
 }
 
+.pic {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .mydata {
   padding: 2rem;
   color: rgb(192, 231, 255);
@@ -55,6 +66,7 @@ h1 {
   padding: 3rem;
   text-align: justify;
   font-size: 1.2rem;
+  width: 60%;
 }
 
 .contactInfo {
@@ -69,6 +81,7 @@ h1 {
 
 .firstBlock {
   background-color: rgb(0, 126, 254);
+  display: flex;
 }
 
 .projects {
@@ -84,10 +97,10 @@ h1 {
 @media screen and (max-width: 750px) {
   h1 {
     font-size: 4.7rem;
-    text-align:left;
+    text-align: left;
   }
 
-  .leo{
+  .leo {
     margin-bottom: 2rem;
   }
 }
