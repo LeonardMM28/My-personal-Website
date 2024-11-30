@@ -3,3 +3,6 @@ DIR TREE:
 
  FILES: 
  npm run aggregate-files
+
+
+sudo chown -R $USER /Users/leonardomm/Desktop/My-personal-Website

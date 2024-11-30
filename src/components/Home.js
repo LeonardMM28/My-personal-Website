@@ -77,9 +77,7 @@ function Home() {
             <div className="info-item">
               <span className="info-icon">&#128205;</span>{" "}
               {/* Location Pin Icon */}
-              <span className="info-text">
-                San Francisco, CA
-              </span>
+              <span className="info-text">San Francisco, CA</span>
             </div>
             <div className="info-item">
               <span className="info-text">
@@ -107,10 +105,18 @@ function Home() {
             animate={{ opacity: 1 }}
             transition={{ delay: 2.5, duration: 1 }}
           >
-            <a href="/projects" className="btn primary-btn">
+            <a
+              href="/projects"
+              className="btn primary-btn"
+              style={{ color: "rgb(74, 144, 226)" }}
+            >
               Explore My Projects |{" "}
             </a>
-            <a href="/contact" className="btn secondary-btn">
+            <a
+              href="/contact"
+              className="btn secondary-btn"
+              style={{ color: "rgb(74, 144, 226)" }}
+            >
               Let's Connect
             </a>
           </motion.div>
