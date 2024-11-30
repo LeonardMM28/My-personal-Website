@@ -348,26 +348,116 @@ footer .social-icons a:hover {
 }
 
 /* Skills Section Styles */
+/* Skills Section Styles */
+.skills-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  padding: 40px 20px;
+  background-color: var(--secondary-bg);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skills-title {
+  font-size: 3rem;
+  color: var(--accent-color);
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.skills-title::after {
+  content: '';
+  width: 80px;
+  height: 4px;
+  background-color: var(--accent-color);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.skill-category {
+  background-color: var(--primary-bg);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.category-title {
+  font-size: 1.8rem;
+  color: var(--primary-text);
+  margin-bottom: 15px;
+  text-align: center;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 5px;
+}
+
 .skills-list {
+  list-style: none;
   display: flex;
   flex-wrap: wrap;
+  gap: 10px;
   justify-content: center;
-  gap: 15px;
-  list-style-type: none;
 }
 
 .skill-item {
   background-color: var(--accent-color);
-  color: #ffffff;
-  padding: 10px 20px;
+  color: var(--primary-bg);
+  padding: 8px 15px;
   border-radius: 20px;
   font-size: 1rem;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  cursor: pointer;
+  text-align: center;
 }
 
 .skill-item:hover {
-  background-color: #009688; /* Slight variation for hover */
-  transform: scale(1.05);
+  transform: scale(1.5);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .skills-title {
+    font-size: 2.5rem;
+  }
+
+  .category-title {
+    font-size: 1.5rem;
+  }
+
+  .skill-item {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 30px 15px;
+  }
+
+  .skills-title {
+    font-size: 2.2rem;
+  }
+
+  .category-title {
+    font-size: 1.3rem;
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-item {
+    font-size: 0.85rem;
+    padding: 5px 10px;
+  }
 }
 
 /* Responsive Styles */
@@ -418,5 +508,66 @@ footer .social-icons a:hover {
   .skills-list {
     flex-direction: column;
     align-items: center;
+  }
+}
+
+.philosophy {
+  padding: 4rem 2rem; /* Increased padding for more space */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.philosophy-title {
+  font-size: 2.8rem;
+  margin-bottom: 2rem; /* Increased space below title */
+}
+
+.philosophy-intro,
+.philosophy-body {
+  max-width: 800px;
+  font-size: 1.1rem;
+  color: var(--accent-color);
+  line-height: 1.6;
+}
+
+.philosophy-quote {
+  font-style: italic;
+  color: var(--accent-color);
+  margin: 3rem 0; /* Increased space above and below quote */
+  padding: 1rem 2rem;
+  border-left: 5px solid #2c3e50;
+  display: inline-block;
+  background-color: var(--secondary-bg);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.philosophy-logo {
+  width: 150px; /* Fixed width */
+  height: 150px; /* Fixed height */
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.philosophy-logo:hover {
+  transform: scale(1.05); /* Slight zoom on hover for interactivity */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .philosophy-title {
+    font-size: 2.2rem;
+  }
+
+  .philosophy-intro,
+  .philosophy-body {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .philosophy-logo {
+    width: 120px;
+    height: 120px;
   }
 }

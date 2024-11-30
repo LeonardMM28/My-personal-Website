@@ -5,15 +5,22 @@ function Education() {
   const education = [
     {
       institution: "San Francisco State University",
-      degree: "Bachelor of Science in Computer Science",
-      duration: "Expected Graduation: May 2024",
+      degree: "Bachelor of Science in Computer Science (Dual Degree Program)",
+      duration: "September 2022 - Expected May 2025",
       details: [
-        "GPA: 3.8",
-        "Dean’s List for 4 semesters",
-        "Relevant Coursework: Data Structures, Algorithms, Database Systems",
+        "Cumulative GPA: 3.73 – Dean’s List (x4: FA22, SP23, FA23, SP24)",
+        "Transfer from Feng Chia University (2+2 Program)",
       ],
     },
-    // Add more education details here
+    {
+      institution: "Feng Chia University",
+      degree: "Bachelor of Science in Computer Science (Dual Degree Program)",
+      duration: "September 2020 - Expected May 2025 (SFSU)",
+      details: [
+        "Received Outstanding Performance Scholarship (x2)",
+        "Dean’s List (Spring 2021)",
+      ],
+    },
   ];
 
   return (
