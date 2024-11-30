@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import profileImage from "../assets/images/leo.jpeg";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -105,20 +106,20 @@ function Home() {
             animate={{ opacity: 1 }}
             transition={{ delay: 2.5, duration: 1 }}
           >
-            <a
-              href="/projects"
+            <Link
+              to="/projects"
               className="btn primary-btn"
               style={{ color: "rgb(74, 144, 226)" }}
             >
-              Explore My Projects |{" "}
-            </a>
-            <a
-              href="/contact"
+              Explore My Projects | {" "}
+            </Link>
+            <Link
+              to="/contact"
               className="btn secondary-btn"
               style={{ color: "rgb(74, 144, 226)" }}
             >
               Let's Connect
-            </a>
+            </Link>
           </motion.div>
         </motion.div>
       </motion.div>
