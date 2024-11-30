@@ -14,8 +14,8 @@ const readFile = promisify(fs.readFile);
 const writeFile = promisify(fs.writeFile);
 
 // Define directories to include/exclude
-const INCLUDE_DIRS = ["Back-End", "public", "scripts", "src"];
-const EXCLUDE_DIRS = ["node_modules", ".git", "dist", "build", "coverage"];
+const INCLUDE_DIRS = ["src"];
+const EXCLUDE_DIRS = ["node_modules", ".git", "dist", "build", "coverage", "public", "static"];
 
 // Function to build the directory tree object
 async function buildTree(dirPath) {
