@@ -5,7 +5,7 @@ function ProfessionalExperience() {
   const experiences = [
     {
       company: "BlueCorgi (www.bluecorgi.com)",
-      role: "Co-Founder | Lead Software Engineer",
+      role: "Co-Founder | Full-Stack Engineer",
       duration: "March 2024 – Present",
       responsibilities: [
         "Co-founded BlueCorgi, a web platform offering AI-powered tools to global users.",
@@ -13,6 +13,14 @@ function ProfessionalExperience() {
         "Designed and deployed a scalable, secure infrastructure using AWS services like EC2, S3, RDS, DynamoDB, and more.",
         "Integrated advanced AI tools, supporting thousands of users and over 100 languages.",
         "Scheduled public launch and broader testing by year-end 2024.",
+      ],
+    },
+    {
+      company: "Scale AI",
+      role: "Software Engineer – AI Consultant, Scale AI (Freelancer)",
+      duration: "January 2024 – Present",
+      responsibilities: [
+        "Contributed to the improvement of LLM outputs based on prompts about different technologies and programming languages, enhancing Software Engineering processes as part of a dynamic team.",
       ],
     },
     {
