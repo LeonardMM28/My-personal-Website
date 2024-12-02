@@ -36,8 +36,6 @@ function Skills() {
       skills: [
         "Node.js",
         "Express.js",
-        "Django",
-        "Flask",
         "RESTful API Design",
         "Authentication & Authorization",
       ],
@@ -49,7 +47,6 @@ function Skills() {
         "MongoDB",
         "AWS DynamoDB",
         "SQLite",
-        "Redis",
       ],
     },
     {
@@ -72,13 +69,10 @@ function Skills() {
       category: "DevOps & Tools",
       skills: [
         "Git & GitHub",
-        "GitLab",
         "CI/CD Pipelines",
         "Docker",
         "Kubernetes",
         "Webpack",
-        "Babel",
-        "ESLint",
         "Prettier",
       ],
     },
@@ -86,7 +80,6 @@ function Skills() {
       category: "API Integration & Management",
       skills: [
         "RESTful APIs",
-        "SOAP APIs",
         "API Documentation",
         "Postman",
         "API Security",
@@ -97,9 +90,7 @@ function Skills() {
       skills: [
         "Machine Learning Algorithms",
         "TensorFlow",
-        "PyTorch",
-        "Natural Language Processing (NLP)",
-        "Computer Vision",
+        "MathLab",
         "AI Model Deployment",
       ],
     },
@@ -188,7 +179,7 @@ function Skills() {
         transition={{ duration: 0.8 }}
         className="skills-title"
       >
-        Skills
+        Skills (Varying Proficiency)
       </motion.h2>
       <motion.div
         className="skills-container"
