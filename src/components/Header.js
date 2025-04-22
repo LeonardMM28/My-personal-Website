@@ -1,5 +1,3 @@
-// src/components/Header.js
-
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
@@ -59,11 +57,11 @@ export default function Header() {
 
   return (
     <header>
-      <h1>Leonardo Meza Martinez</h1>
+      <h1>Welcome to my Bio</h1>
 
       {/* Mobile Menu Button */}
       <button
-        className="mobile-menu-btn"
+        className={`mobile-menu-btn ${mobileOpen ? "open" : ""}`}
         onClick={() => setMobileOpen(!mobileOpen)}
         aria-label="Toggle menu"
       >
