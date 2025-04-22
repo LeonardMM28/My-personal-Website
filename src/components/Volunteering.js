@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import rotary from "../assets/images/rotary.png";
 import rotaract from "../assets/images/rotaract.png";
+import { FaLinkedin } from "react-icons/fa";
 
 function Volunteering() {
   const volunteering = [
@@ -22,27 +23,33 @@ function Volunteering() {
         "Represented Mexico in Taiwan, teaching Mexican culture and traditions to local communities while immersing myself in Taiwanese culture.",
         "Built cultural bridges by participating in cultural exchange programs, fostering mutual understanding and appreciation.",
       ],
+      linkedin:
+        "https://www.linkedin.com/company/rotary-international/posts/?feedView=all",
     },
     {
       organization: "Rotaract Club at San Francisco State University",
       role: "Treasurer and President",
-      duration: "2023 - Present",
+      duration: "2023 - 2025",
       activities: [
         "Grew the club from 4 to 12 active members by fostering engagement and implementing strategic growth initiatives.",
         "Organized community service programs and participated in volunteering activities, including the Chinatown Night Market with the Rotary Club of SF Chinatown to assist local vendors.",
         "Led efforts in beach cleanups alongside the Rotary Club of San Francisco, contributing to environmental sustainability.",
       ],
+      linkedin:
+        "https://www.linkedin.com/company/rotaract-club-at-san-francisco-state-university/posts/?feedView=all",
     },
     {
       organization: "Rotaract Club of San Francisco",
-      role: "Founder and Leader",
-      duration: "2025 (Planned Launch)",
+      role: "Founding President",
+      duration: "2025 - 2026",
       activities: [
         "Taking initiative to establish a new community-based Rotaract Club aimed at expanding opportunities for young professionals to engage in community service and leadership development.",
         "Developing strategic plans to ensure the club's successful launch and sustainable growth.",
       ],
+      linkedin:
+        "https://www.linkedin.com/company/rotaract-club-of-san-francisco/",
     },
-  ];
+  ].reverse(); 
 
   return (
     <section>
@@ -80,8 +87,23 @@ function Volunteering() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: index * 0.3 }}
         >
-          <h3>
+          <h3 style={{ display: "flex", alignItems: "center" }}>
             {volunteer.role} at {volunteer.organization}
+            {volunteer.linkedin && (
+              <a
+                href={volunteer.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  marginLeft: "8px",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  color: "var(--accent-color)",
+                }}
+              >
+                <FaLinkedin size={18} />
+              </a>
+            )}
           </h3>
           <p>
             <em>{volunteer.duration}</em>

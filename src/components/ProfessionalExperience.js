@@ -4,15 +4,19 @@ import { motion } from "framer-motion";
 function ProfessionalExperience() {
   const experiences = [
     {
-      company: "BlueCorgi (www.bluecorgi.com)",
-      role: "Co-Founder | Full-Stack Engineer",
+      company: (
+        <a href="https://www.bluecorgi.com" target="_blank" rel="noopener noreferrer">
+          BlueCorgi (www.bluecorgi.com)
+        </a>
+      ),
+      role: "Co-Founder & CTO",
       duration: "March 2024 – Present",
       responsibilities: [
         "Co-founded BlueCorgi, a web platform offering AI-powered tools to global users.",
         "Led full-stack development (frontend, backend, and DevOps) using JavaScript, Python, and Java.",
         "Designed and deployed a scalable, secure infrastructure using AWS services like EC2, S3, RDS, DynamoDB, and more.",
         "Integrated advanced AI tools, supporting thousands of users and over 100 languages.",
-        "Scheduled public launch and broader testing by year-end 2024.",
+        "MVP released on April 2025, and first round of global marketing and broader testing scheduled for the third quarter of the year.",
       ],
     },
     {
