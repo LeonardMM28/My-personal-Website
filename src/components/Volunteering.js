@@ -49,7 +49,7 @@ function Volunteering() {
       linkedin:
         "https://www.linkedin.com/company/rotaract-club-of-san-francisco/",
     },
-  ].reverse(); 
+  ].reverse();
 
   return (
     <section>
