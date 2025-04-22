@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
 import {
-  FaHome,
-  FaUserTie,
-  FaProjectDiagram,
-  FaGraduationCap,
-  FaHandsHelping,
+  FaBars,
   FaBrain,
   FaCogs,
   FaEnvelope,
+  FaGraduationCap,
+  FaHandsHelping,
+  FaHome,
   FaMoon,
+  FaProjectDiagram,
   FaSun,
-  FaBars,
   FaTimes,
+  FaUserTie,
 } from "react-icons/fa";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Header() {
   const location = useLocation();
@@ -81,10 +81,10 @@ export default function Header() {
         ))}
         <button
           onClick={toggleDarkMode}
-          className="theme-toggle"
-          aria-label="Toggle dark mode"
+          className="theme-toggle-btn"
+          aria-label="Switch mode"
         >
-          {darkMode ? <FaSun /> : <FaMoon />}
+          {darkMode ? <FaSun /> : <FaMoon />} Switch Mode
         </button>
       </nav>
     </header>

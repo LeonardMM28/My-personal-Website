@@ -114,6 +114,34 @@ nav a.active {
   color: var(--accent-color);
 }
 
+/* Dark‑mode “Switch Mode” button */
+.theme-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;                  /* ← smaller icon‑text gap */
+  padding: 0.25rem 0.75rem;      /* ← reduced padding */
+  background-color: var(--secondary-bg);
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;            /* ← tighter corners */
+  color: var(--primary-text);
+  font-size: 0.875rem;           /* ← smaller text */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-bg);
+}
+
+/* On mobile, center it in the dropdown */
+@media (max-width: 768px) {
+  .theme-toggle-btn {
+    margin: 1rem auto;
+    width: auto;                /* ← let text+icon dictate button width */
+  }
+}
+
 /* Main Content Styles */
 .content {
   min-height: calc(100vh - 160px);

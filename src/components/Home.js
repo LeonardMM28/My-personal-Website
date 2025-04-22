@@ -48,8 +48,7 @@ function Home() {
             transition={{ delay: 1, duration: 1 }}
             className="intro-paragraph"
           >
-            I'm a passionate Computer Science student at San Francisco State
-            University and the co-founder of BlueCorgi. I thrive on turning
+            I'm the Co-Founder & CTO of BlueCorgi Inc. I thrive on turning
             complex problems into scalable, secure solutions using the latest
             technologies. From designing AI-driven applications to mentoring the
             next generation of tech leaders, my journey is fueled by creativity
