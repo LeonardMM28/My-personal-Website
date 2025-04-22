@@ -556,6 +556,8 @@ footer .social-icons a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+
+  
   .philosophy-title {
     font-size: 2.2rem;
   }
@@ -569,5 +571,110 @@ footer .social-icons a:hover {
   .philosophy-logo {
     width: 120px;
     height: 120px;
+  }
+}
+
+
+
+
+.mobile-menu-btn {
+  display: none;
+}
+
+/* show hamburger only on mobile */
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Make Home full‑viewport and center content */
+  .home {
+    height: 100vh;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 4px solid var(--accent-color);
+  }
+
+  .intro-title {
+    font-size: 1.6rem;
+  }
+
+  .sub-title {
+    font-size: 1.2rem;
+  }
+
+  .intro-paragraph {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .home-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  /* Hamburger & Mobile Nav */
+  header {
+    position: relative;
+    padding: 1rem;
+  }
+
+  .mobile-menu-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--primary-text);
+    z-index: 10;
+  }
+
+  header nav {
+    display: none;
+    flex-direction: column;
+    background: var(--secondary-bg);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 999;
+  }
+
+  header nav.open {
+    display: flex;
+  }
+
+  header nav a {
+    padding: 0.75rem 1.5rem;
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  /* Ensure dark‑mode toggle sits at bottom */
+  .theme-toggle {
+    margin: 1rem auto 0;
   }
 }

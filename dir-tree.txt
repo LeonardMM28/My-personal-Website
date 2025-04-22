@@ -1,0 +1,78 @@
+.
+├── aggregated_files.txt
+├── aggregateFiles.mjs
+├── asset-manifest.json
+├── CNAME
+├── dir-tree.txt
+├── favicon.ico
+├── icon.png
+├── index.html
+├── logo192.png
+├── logo512.png
+├── manifest.json
+├── package-lock.json
+├── package.json
+├── public
+│   ├── favicon.ico
+│   ├── icon.png
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+├── README.md
+├── robots.txt
+├── src
+│   ├── App.js
+│   ├── assets
+│   │   └── images
+│   │       ├── bluecorgi-logo.png
+│   │       ├── css.png
+│   │       ├── fb.png
+│   │       ├── hmtl.png
+│   │       ├── ig.png
+│   │       ├── js.png
+│   │       ├── leo.jpeg
+│   │       ├── node.png
+│   │       ├── proj1.png
+│   │       ├── proj2.png
+│   │       ├── proj3.png
+│   │       ├── rotaract.png
+│   │       ├── rotary.png
+│   │       └── sql.png
+│   ├── components
+│   │   ├── Accomplishments.js
+│   │   ├── Contact.js
+│   │   ├── Education.js
+│   │   ├── Footer.js
+│   │   ├── Header.js
+│   │   ├── Home.js
+│   │   ├── Intro.js
+│   │   ├── Philosophy.js
+│   │   ├── ProfessionalExperience.js
+│   │   ├── Projects.js
+│   │   ├── Skills.js
+│   │   └── Volunteering.js
+│   ├── index.js
+│   ├── logo.svg
+│   ├── reportWebVitals.js
+│   ├── setupTests.js
+│   └── styles.css
+└── static
+    ├── css
+    │   ├── main.2723f112.css
+    │   └── main.2723f112.css.map
+    ├── js
+    │   ├── main.9402a1b0.js
+    │   ├── main.9402a1b0.js.LICENSE.txt
+    │   └── main.9402a1b0.js.map
+    └── media
+        ├── bluecorgi-logo.976e7d74faf74be07e0a.png
+        ├── leo.de759a69e011600f9b02.jpeg
+        ├── proj1.5b60053da1f0e309e1c1.png
+        ├── proj2.b302dba6164432d46923.png
+        ├── proj3.a19ae06d39fb163cc275.png
+        ├── rotaract.7dad3cad773b442befc5.png
+        └── rotary.6ececef236dc212d2aff.png
+
+10 directories, 66 files

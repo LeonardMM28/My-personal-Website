@@ -13,66 +13,78 @@ import {
   FaEnvelope,
   FaMoon,
   FaSun,
+  FaBars,
+  FaTimes,
 } from "react-icons/fa";
 
-function Header() {
+export default function Header() {
   const location = useLocation();
   const [darkMode, setDarkMode] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
-  // On component mount, check for saved theme preference
+  // Load saved theme
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
+    const theme = localStorage.getItem("theme");
+    if (theme === "dark") {
       setDarkMode(true);
       document.body.classList.add("dark");
     }
   }, []);
 
-  // Toggle dark mode
   const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    if (!darkMode) {
-      document.body.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
+    if (darkMode) {
       document.body.classList.remove("dark");
       localStorage.setItem("theme", "light");
+    } else {
+      document.body.classList.add("dark");
+      localStorage.setItem("theme", "dark");
     }
+    setDarkMode(!darkMode);
   };
 
   const navLinks = [
-    { path: "/", name: "Home", icon: <FaHome /> },
+    { path: "/", label: "Home", icon: <FaHome /> },
     {
       path: "/professional-experience",
-      name: "Experience",
+      label: "Experience",
       icon: <FaUserTie />,
     },
-    { path: "/projects", name: "Projects", icon: <FaProjectDiagram /> },
-    { path: "/education", name: "Education", icon: <FaGraduationCap /> },
-    { path: "/volunteering", name: "Volunteering", icon: <FaHandsHelping /> },
-    { path: "/philosophy", name: "Philosophy", icon: <FaBrain /> },
-    { path: "/skills", name: "Skills", icon: <FaCogs /> },
-    { path: "/contact", name: "Contact", icon: <FaEnvelope /> },
+    { path: "/projects", label: "Projects", icon: <FaProjectDiagram /> },
+    { path: "/education", label: "Education", icon: <FaGraduationCap /> },
+    { path: "/volunteering", label: "Volunteering", icon: <FaHandsHelping /> },
+    { path: "/philosophy", label: "Philosophy", icon: <FaBrain /> },
+    { path: "/skills", label: "Skills", icon: <FaCogs /> },
+    { path: "/contact", label: "Contact", icon: <FaEnvelope /> },
   ];
 
   return (
     <header>
       <h1>Leonardo Meza Martinez</h1>
-      <nav>
+
+      {/* Mobile Menu Button */}
+      <button
+        className="mobile-menu-btn"
+        onClick={() => setMobileOpen(!mobileOpen)}
+        aria-label="Toggle menu"
+      >
+        {mobileOpen ? <FaTimes /> : <FaBars />}
+      </button>
+
+      <nav className={mobileOpen ? "open" : ""}>
         {navLinks.map((link) => (
           <Link
             key={link.path}
             to={link.path}
             className={location.pathname === link.path ? "active" : ""}
+            onClick={() => setMobileOpen(false)}
           >
-            {link.icon} {link.name}
+            {link.icon} {link.label}
           </Link>
         ))}
-        {/* Dark Mode Toggle Button */}
         <button
           onClick={toggleDarkMode}
           className="theme-toggle"
-          aria-label="Toggle Dark Mode"
+          aria-label="Toggle dark mode"
         >
           {darkMode ? <FaSun /> : <FaMoon />}
         </button>
@@ -80,5 +92,3 @@ function Header() {
     </header>
   );
 }
-
-export default Header;
