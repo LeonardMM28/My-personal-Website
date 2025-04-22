@@ -598,20 +598,27 @@ footer .social-icons a:hover {
     justify-content: center;
   }
 
+  /* Stretch the content wrapper to full width */
   .home-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;       /* ← stretch children full‑width */
     text-align: center;
     gap: 1.5rem;
     padding: 0 1rem;
+    width: 100%;
   }
 
+  /* Ensure text container uses full width */
+  .home-text {
+    width: 100%;
+  }
   .profile-img {
     width: 150px;
     height: 150px;
     object-fit: cover;
     border: 4px solid var(--accent-color);
+    margin: 0 auto;             /* ← center horizontally */
   }
 
   .intro-title {
@@ -624,7 +631,7 @@ footer .social-icons a:hover {
 
   .intro-paragraph {
     font-size: 1rem;
-    max-width: 90%;
+    max-width: 100%;            /* ← remove any extra right gutter */
   }
 
   .home-buttons {
