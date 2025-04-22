@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
-import profileImage from "../assets/images/leo.jpeg";
 import { Link } from "react-router-dom";
+import profileImage from "../assets/images/leo.jpeg";
 
 function Home() {
   return (
@@ -48,8 +48,7 @@ function Home() {
             transition={{ delay: 1, duration: 1 }}
             className="intro-paragraph"
           >
-            I'm a passionate Computer Science student at San Francisco State
-            University and the co-founder of BlueCorgi. I thrive on turning
+            I'm the Co-Founder & CTO of BlueCorgi Inc. I thrive on turning
             complex problems into scalable, secure solutions using the latest
             technologies. From designing AI-driven applications to mentoring the
             next generation of tech leaders, my journey is fueled by creativity
@@ -80,23 +79,6 @@ function Home() {
               {/* Location Pin Icon */}
               <span className="info-text">San Francisco, CA</span>
             </div>
-            <div className="info-item">
-              <span className="info-text">
-                (Originally from Aguascalientes, Mexico)
-              </span>
-            </div>
-            <div className="info-item">
-              <span className="info-text">
-                Currently under F1 status, authorized to work full-time through
-                CPT.
-              </span>
-            </div>
-            <div className="info-item">
-              <span className="info-text">
-                After graduating in July 2025, eligible for OPT, and can apply
-                for TN visa if needed.
-              </span>
-            </div>
           </motion.div>
 
           {/* Buttons */}
@@ -111,7 +93,7 @@ function Home() {
               className="btn primary-btn"
               style={{ color: "rgb(74, 144, 226)" }}
             >
-              Explore My Projects | {" "}
+              Explore My Projects |{" "}
             </Link>
             <Link
               to="/contact"

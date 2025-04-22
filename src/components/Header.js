@@ -1,25 +1,26 @@
-import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { useEffect, useRef, useState } from "react";
 import {
-  FaHome,
-  FaUserTie,
-  FaProjectDiagram,
-  FaGraduationCap,
-  FaHandsHelping,
+  FaBars,
   FaBrain,
   FaCogs,
   FaEnvelope,
+  FaGraduationCap,
+  FaHandsHelping,
+  FaHome,
   FaMoon,
+  FaProjectDiagram,
   FaSun,
-  FaBars,
   FaTimes,
+  FaUserTie,
 } from "react-icons/fa";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Header() {
   const location = useLocation();
   const [darkMode, setDarkMode] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-
+  const navRef = useRef(null);
+  const menuBtnRef = useRef(null);
   // Load saved theme
   useEffect(() => {
     const theme = localStorage.getItem("theme");
@@ -39,6 +40,22 @@ export default function Header() {
     }
     setDarkMode(!darkMode);
   };
+  // Close mobile menu when clicking outside of nav or hamburger button
+  useEffect(() => {
+    function handleClickOutside(e) {
+      if (
+        mobileOpen &&
+        navRef.current &&
+        !navRef.current.contains(e.target) &&
+        menuBtnRef.current &&
+        !menuBtnRef.current.contains(e.target)
+      ) {
+        setMobileOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [mobileOpen]);
 
   const navLinks = [
     { path: "/", label: "Home", icon: <FaHome /> },
@@ -61,6 +78,7 @@ export default function Header() {
 
       {/* Mobile Menu Button */}
       <button
+        ref={menuBtnRef}
         className={`mobile-menu-btn ${mobileOpen ? "open" : ""}`}
         onClick={() => setMobileOpen(!mobileOpen)}
         aria-label="Toggle menu"
@@ -68,7 +86,7 @@ export default function Header() {
         {mobileOpen ? <FaTimes /> : <FaBars />}
       </button>
 
-      <nav className={mobileOpen ? "open" : ""}>
+      <nav ref={navRef} className={mobileOpen ? "open" : ""}>
         {navLinks.map((link) => (
           <Link
             key={link.path}
@@ -81,10 +99,10 @@ export default function Header() {
         ))}
         <button
           onClick={toggleDarkMode}
-          className="theme-toggle"
-          aria-label="Toggle dark mode"
+          className="theme-toggle-btn"
+          aria-label="Switch mode"
         >
-          {darkMode ? <FaSun /> : <FaMoon />}
+          {darkMode ? <FaSun /> : <FaMoon />} Switch Mode
         </button>
       </nav>
     </header>

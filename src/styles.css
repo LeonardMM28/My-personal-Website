@@ -114,6 +114,34 @@ nav a.active {
   color: var(--accent-color);
 }
 
+/* Dark‑mode “Switch Mode” button */
+.theme-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;                  /* ← smaller icon‑text gap */
+  padding: 0.25rem 0.75rem;      /* ← reduced padding */
+  background-color: var(--secondary-bg);
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;            /* ← tighter corners */
+  color: var(--primary-text);
+  font-size: 0.875rem;           /* ← smaller text */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-bg);
+}
+
+/* On mobile, center it in the dropdown */
+@media (max-width: 768px) {
+  .theme-toggle-btn {
+    margin: 1rem auto;
+    width: auto;                /* ← let text+icon dictate button width */
+  }
+}
+
 /* Main Content Styles */
 .content {
   min-height: calc(100vh - 160px);
@@ -598,20 +626,27 @@ footer .social-icons a:hover {
     justify-content: center;
   }
 
+  /* Stretch the content wrapper to full width */
   .home-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;       /* ← stretch children full‑width */
     text-align: center;
     gap: 1.5rem;
     padding: 0 1rem;
+    width: 100%;
   }
 
+  /* Ensure text container uses full width */
+  .home-text {
+    width: 100%;
+  }
   .profile-img {
     width: 150px;
     height: 150px;
     object-fit: cover;
     border: 4px solid var(--accent-color);
+    margin: 0 auto;             /* ← center horizontally */
   }
 
   .intro-title {
@@ -624,7 +659,7 @@ footer .social-icons a:hover {
 
   .intro-paragraph {
     font-size: 1rem;
-    max-width: 90%;
+    max-width: 100%;            /* ← remove any extra right gutter */
   }
 
   .home-buttons {
